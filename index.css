@@ -1,0 +1,56 @@
+* {
+    font-family: "Space Mono";
+    box-sizing: border-box;
+}
+
+body{
+    color:white;
+    background-color: black;
+}
+
+h1 {
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
+    font-style: italic;
+}
+
+h3 {
+    text-align: center;
+}
+
+.logo {
+    display: block;
+    margin: 0 auto;
+    max-height: 800px;
+    max-width: 423px;
+    width: 90%;
+}
+
+
+.space-mono-regular {
+    font-family: "Space Mono", monospace;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .space-mono-regular-italic {
+    font-family: "Space Mono", monospace;
+    font-weight: 400;
+    font-style: italic;
+  }
+  
+  .space-mono-bold {
+    font-family: "Space Mono", monospace;
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+  .space-mono-bold-italic {
+    font-family: "Space Mono", monospace;
+    font-weight: 700;
+    font-style: italic;
+  }
+  
