@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="resources\css\sheet.css" type="text/css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <title>West's Sheet</title>
+</head>
+<body>
+    <table class="skillsTable"id="coreSkillsTable"> <!-- 28 rows -->
+        <tr>
+            <th rowspan="28" class="categoryName" id="coreSkillsCategoryName">Core Skills</th>
+            <td rowspan="6" class="categoryPresence categoryName">Presence</td>
+            <td class="tableCategory">Core Skill Value</td>
+            <th rowspan="28" class="categoryName" id="subSkillsCategoryName">Subskills</th>
+            <td class="categoryPresence">Subskill</td>
+            <td class="tableCategory">Bonus</td>
+            <td class="tableCategory">Total</td>
+            <th rowspan="28" class="categoryName" id="specializationsCategoryName">Specializations</th>
+            <td class="categoryPresence">Liturgies</td>
+            <td class="tableCategory">Bonus</td>
+            <td class="tableCategory">Total</td>
+            <td class="categoryPresence">Charm</td>
+            <td class="tableCategory">Bonus</td>
+            <td class="tableCategory">Total</td>
+            <td class="categoryPresence">Perform</td>
+            <td class="tableCategory">Bonus</td>
+            <td class="tableCategory">Total</td>
+        </tr>
+        <tr>
+            <td rowspan="4"><input type="number" id="numPresence"/></td>
+            <td><strong>Liturgies</strong></td>
+            <td><input type="number" id="numLiturgiesBonus"/></td>
+            <td><input type="number" id="numLiturgiesTotal"/></td>
+        </tr>
+        <tr>
+            <td><em>Confidence</em></td>
+            <td><input type="number" id="numConfidenceBonus"/></td>
+            <td><input type="number" id="numConfidenceTotal"/></td>
+        </tr>
+        <tr>
+            <td><em>Understand</em></td>
+            <td><input type="number" id="numUnderstandBonus"/></td>
+            <td><input type="number" id="numUnderstandTotal"/></td>
+        </tr>
+        <tr>
+            <td><strong>Charm</strong></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><strong>Perform</strong></td>
+        </tr>
+        <tr>
+            <td rowspan="6" class="categoryWits categoryName coreSkillName">Wits</td>
+            <td></td>
+            <td class="categoryWits tableCategory">Subskill</td>
+        </tr>
+        <tr>
+            <td rowspan="4"><input type="number" id="numWits"/></td>
+            <td><strong>Occultism</strong></td>
+        </tr>
+         <tr>
+            <td><em>Reason</em></td>
+        </tr>
+        <tr>
+            <td><em>Learn</em></td>
+        </tr>
+        <tr>
+            <td><strong>Investigate</strong></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><strong>Practice</strong></td>
+        </tr>
+        <tr>
+            <td rowspan="7" class="categoryAgility categoryName coreSkillName">Agility</td>
+            <td></td>
+            <td class="categoryAgility tableCategory">Subskill</td>
+        </tr>
+        <tr>
+            <td rowspan="5"><input type="number" id="numAgility"/></td>
+            <td><strong>Fine Weapons</strong></td>
+        </tr>
+        <tr>
+            <td><strong>Dual Weapons</strong></td>
+        </tr>
+         <tr>
+            <td><em>Evade</em></td>
+        </tr>
+        <tr>
+            <td><em>Ambush</em></td>
+        </tr>
+        <tr>
+            <td><strong>Finesse</strong></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><strong>Pilot</strong></td>
+        </tr>
+        <tr>
+            <td rowspan="7" class="categoryVigor categoryName coreSkillName">Vigor</td>
+            <td></td>
+            <td class="categoryVigor tableCategory">Subskill</td>
+        </tr>
+        <tr>
+            <td rowspan="5"><input type="number" id="numVigor"/></td>
+            <td><strong>Great Weapons</strong></td>
+        </tr>
+        <tr>
+            <td><strong>Versatile Weapons</strong></td>
+        </tr>
+         <tr>
+            <td><em>Block</em></td>
+        </tr>
+        <tr>
+            <td><em>Watch</em></td>
+        </tr>
+        <tr>
+            <td><strong>Endure</strong></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><strong>Exert</strong></td>
+        </tr>
+    </table>
+</body>
+</html>
