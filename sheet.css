@@ -1,0 +1,76 @@
+* {
+    font-family: "Space Mono";
+    box-sizing: border-box;
+}
+
+body{
+    color:white;
+    background-color: black;
+    margin: auto;
+}
+
+table {
+    border: 5px grey solid;
+    height: 800px;
+    text-align: center;
+}
+
+input {
+    text-align: center;
+    font-size: 20px;
+    width: 50px;
+}
+
+.coreSkillName {
+  background-color: grey;
+}
+
+.tableCategory {
+  background-color: grey;
+}
+
+.categoryName {
+  writing-mode: vertical-lr;
+  background-color: grey;
+}
+
+.categoryPresence {
+  background-color: rgb(228, 169, 9);
+}
+
+.categoryWits{
+  background-color: rgb(33, 33, 133);
+}
+
+.categoryAgility{
+  background-color: rgb(179, 37, 37);
+}
+
+.categoryVigor{
+  background-color: rgb(12, 99, 12);
+}
+
+.space-mono-regular {
+    font-family: "Space Mono", monospace;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .space-mono-regular-italic {
+    font-family: "Space Mono", monospace;
+    font-weight: 400;
+    font-style: italic;
+  }
+  
+  .space-mono-bold {
+    font-family: "Space Mono", monospace;
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+  .space-mono-bold-italic {
+    font-family: "Space Mono", monospace;
+    font-weight: 700;
+    font-style: italic;
+  }
+  
