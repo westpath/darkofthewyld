@@ -1,5 +1,0 @@
-function getBasePresence(subskillBonus){
-    let subskillBonus = document.getElementById(subskillBonus)
-    console.log(subskillBonus + document.getElementById("numPresence"))
-};
-
