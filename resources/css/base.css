@@ -1,0 +1,83 @@
+html {
+    height: 100%;
+    font-size: 16px;
+    font-family: 'Gothic A1','Candara',serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #f6f0e1;
+    }
+
+h1 {
+    font-family: 'Montagu Slab','Baskerville',serif;
+    font-size: 3rem;
+}
+
+h2 {
+    font-family: 'Montagu Slab','Baskerville',serif;
+    font-size: 2rem;
+}
+
+h3 {
+    font-family: 'Montagu Slab','Baskerville',serif;
+    font-size: 1.5rem;
+}
+
+
+
+
+body {
+    background-color:black;
+    min-height: 100%;
+}
+
+nav {
+    position: absolute;
+    top:0;
+    z-index: 12;
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+    padding: 1rem 1rem 0.5rem 1rem;
+    height: fit-content;
+}
+
+nav ul {
+    display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-items: center;
+	align-content: center;
+    list-style: none;
+    margin: 0.5rem 0.5rem 0rem 0.5rem;
+}
+
+nav li a {
+    font-family: 'Montagu Slab','Baskerville',serif;
+    font-size: 1.5rem;
+    cursor:pointer;
+    text-decoration: none;
+}
+
+@media only screen and (max-width: 1000px) {
+    nav {
+        padding-top: 0rem;
+    }
+    nav li a {
+        font-size: 0.75rem;
+        margin-top: 0rem;
+        padding-top: 0rem;
+}
+}
+
+nav li a:hover {
+    color: #9F363A;
+}
+
+.activepage {
+    color: #9F363A;
+}

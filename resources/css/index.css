@@ -1,0 +1,58 @@
+.banner {
+    width: 100%;
+}
+
+.content {
+    text-align: left;
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    overflow: hidden;
+}
+
+
+h1 {
+    text-align: center;
+    padding-bottom: 1rem;
+}
+
+.content img {
+    flex-shrink: 1;
+    min-height: 2rem;
+    max-height: 30rem;
+}
+
+.textContent {
+    flex-shrink: 2;
+    max-width: 60%;
+    min-width: 20%;
+}
+
+.extra {
+    display: none;
+}
+
+
+@media only screen and (max-width: 650px) {
+    .content img {
+        display: none;
+    }
+    .textContent {
+        max-width: 90%;
+    }
+    h1 {
+        margin-left: 0rem;
+        text-align: center;
+    }
+    .extra {
+        display: inline-flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: center;
+    }
+    .extra img {
+        min-height: 2rem;
+        max-height: 30rem;
+    }
+}
