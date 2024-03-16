@@ -33,3 +33,11 @@
         font-size: 1rem;
     }
 }
+
+.howTo {
+    display: block;
+    width: 60%;
+    background-color: #9F363A;
+    margin: 0 auto;
+    padding: 1rem;
+}

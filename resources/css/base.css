@@ -81,3 +81,98 @@ nav li a:hover {
 .activepage {
     color: #9F363A;
 }
+
+footer {
+    background-color: #9F363A;
+    padding: 2rem;
+    width: 100%;
+    display: inline-flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+}
+
+.getContactForm {
+    display: inline-block;
+    width: 40%;
+}
+
+footer form div {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 70%;
+    margin: 0.5rem 0 0.5rem 0;
+}
+
+#name {
+    grid-column: span 2;
+}
+
+#email {
+    grid-column: span 2;
+}
+
+#reason {
+    max-height: 4rem;
+    min-height: 3rem;
+    grid-column: span 2;
+}
+
+#submitButton {
+    grid-column: span 2;
+}
+
+.submit {
+    background-color: #9F363A;
+    border: 1px solid black;
+    color: #f6f0e1;
+    padding: 0.5rem;
+    font-size: 1.5rem;
+    height: 3rem;
+}
+
+.submit:hover {
+    background-color: #43232E;
+    font-size: 1.7rem;
+    transition: 200ms;
+}
+
+.submit:active {
+    background-color: black;
+}
+
+.footerContent {
+    text-align: right;
+    display: inline-flex;
+    align-items: flex-end;
+    flex: wrap;
+}
+
+@media only screen and (max-width:1060px) {
+    footer {
+        justify-content: center;
+    }
+    footer section {
+        margin: 0 2rem 0.5rem 2rem;
+    }
+    footer form div {
+        width: 90%;
+    }
+    .getContactForm {
+        display: inline-block;
+        width: 100%;
+    }
+    .footerContent {
+        text-align: center;
+        align-items: center;
+    }
+    .getContactForm {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .getContact {
+        display: inline-flex;
+        flex-wrap: nowrap;
+        flex-direction: column;
+    }
+}
