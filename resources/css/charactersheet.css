@@ -27,6 +27,7 @@ h2 {
     flex-wrap: wrap;
     height: 100%;
     align-items: center;
+    padding: 1rem;
 }
 
 #coreSkillBanner {
