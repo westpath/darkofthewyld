@@ -6,6 +6,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@300;400;700&family=Montagu+Slab:opsz,wght@16..144,100..700&display=swap" rel="stylesheet">
         <link href="resources\css\base.css" rel="stylesheet">
         <link href="resources\css\charactersheet.css" rel="stylesheet">
+        <script type = "text/javascript" src="resources/js/charactersheet.js"></script>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Dark of the Wyld: Sheet</title>
@@ -22,107 +23,124 @@
         </nav>
     </header>
     <main>
+        <section>
+            <form id="nameForm">
+                <label for="nameValue">Name:</label>
+                <input type="text" id="nameValue" name="nameValue" value="Name">
+            </form>
+        </section>
+        <h2>Coreskills, Subskills, and Specializations</h2>
         <section class="characterSheet" id="wholeSheet">
-            <div class="coreSkill">
-                <h1 id="coreSkillBanner">Core Skills</h1>
-                    <div class="coreSkillNames">
-                        <form id="coreSkillValuesForm">
-                            <label for="presenceValue">Presence</label>
-                            <input type="number" id="presenceValue" name="presenceValue" value="0">
-                            <label for="witsValue">Wits</label>
-                            <input type="number" id="witsValue" name="witsValue" value="0">
-                            <label for="agilityValue">Agility</label>
-                            <input type="number" id="agilityValue" name="agilityValue" value="0">
-                            <label for="vigorValue">Vigor</label>
-                            <input type="number" id="vigorValue" name="vigorValue" value="0">
-                        </form>
-                    </div>
+            <div id="presenceGroup">
+                <div class="coreSkill">
+                    <label for="presenceValue">Presence</label>
+                    <input class="input" type="text" id="presenceValue" name="presenceValue" value="0" onchange="getValues()">
+                </div>
+                <div class="subskill">
+                    <h2>Subskill</h2>
+                    <h2>Bonus</h2>
+                    <h2>Total</h2>
+                    <label for="liturgiesBonus">Liturgies</label>
+                    <input class="input" type="text" id="liturgiesBonus" name="liturgiesBonus" value="0" onchange="getValues()">
+                    <p id="totalLiturgies"></p>
+                    <label for="confidenceBonus"><em>Confidence</em></label>
+                    <input class="input" type="text" id="confidenceBonus" name="confidenceBonus" value="0" onchange="getValues()">
+                    <p id="totalConfidence"></p>
+                    <label for="understandBonus"><em>Understand</em></label>
+                    <input class="input" type="text" id="understandBonus" name="understandBonus" value="0" onchange="getValues()">
+                    <p id="totalUnderstand"></p>
+                    <label for="charmBonus">Charm</label>
+                    <input class="input" type="text" id="charmBonus" name="charmBonus" value="0" onchange="getValues()">
+                    <p id="totalCharm"></p>
+                    <label for="performBonus">Perform</label>
+                    <input class="input" type="text" id="performBonus" name="performBonus" value="0" onchange="getValues()">
+                    <p id="totalPerform"></p>
+                </div>
             </div>
-            <div class="subSkill">
-                <h1 id="subSkillBanner">Subskills</h1>
-                    <div class="subSkillNames">
-                        <form id="subSkillValuesForm">
-                            <h2>Subskill</h2>
-                            <h2>Bonus</h2>
-                            <h2>Total</h2>
-                            <label for="liturgiesBonus">Liturgies</label>
-                            <input type="number" id="liturgiesBonus" name="liturgiesBonus" value="0">
-                            <p>Script Needed</p>
-                            <label for="confidenceBonus"><em>Confidence</em></label>
-                            <input type="number" id="confidenceBonus" name="confidenceBonus" value="0">
-                            <p>Script Needed</p>
-                            <label for="understandBonus"><em>Understand</em></label>
-                            <input type="number" id="understandBonus" name="understandBonus" value="0">
-                            <p>Script Needed</p>
-                            <label for="charmBonus">Charm</label>
-                            <input type="number" id="charmBonus" name="charmBonus" value="0">
-                            <p>Script Needed</p>
-                            <label for="performBonus">Liturgies</label>
-                            <input type="number" id="performBonus" name="performBonus" value="0">
-                            <p>Script Needed</p>
-                            <h2>Subskill</h2>
-                            <h2>Bonus</h2>
-                            <h2>Total</h2>
-                            <label for="occultismBonus">Occultism</label>
-                            <input type="number" id="occultismBonus" name="occultismBonus" value="0">
-                            <p>Script Needed</p>
-                            <label for="reasonBonus"><em>Reason</em></label>
-                            <input type="number" id="reasonBonus" name="reasonBonus" value="0">
-                            <p>Script Needed</p>
-                            <label for="learnBonus"><em>Learn</em></label>
-                            <input type="number" id="learnBonus" name="learnBonus" value="0">
-                            <p>Script Needed</p>
-                            <label for="investigateBonus">Investigate</label>
-                            <input type="number" id="investigateBonus" name="investigateBonus" value="0">
-                            <p>Script Needed</p>
-                            <label for="practiceBonus">Practice</label>
-                            <input type="number" id="practiceBonus" name="practiceBonus" value="0">
-                            <p>Script Needed</p>
-                            <h2>Subskill</h2>
-                            <h2>Bonus</h2>
-                            <h2>Total</h2>
-                            <label for="fineWeaponsBonus">Fine Weapons</label>
-                            <input type="number" id="fineWeaponsBonus" name="fineWeaponsBonus" value="0">
-                            <p>Script Needed</p>
-                            <label for="dualWeaponsBonus">Dual Weapons</label>
-                            <input type="number" id="dualWeaponsBonus" name="dualWeaponsBonus" value="0">
-                            <p>Script Needed</p>
-                            <label for="evadeBonus"><em>Evade</em></label>
-                            <input type="number" id="evadeBonus" name="evadeBonus" value="0">
-                            <p>Script Needed</p>
-                            <label for="ambushBonus"><em>Ambush</em></label>
-                            <input type="number" id="ambushBonus" name="ambushBonus" value="0">
-                            <p>Script Needed</p>
-                            <label for="finesseBonus">Finesse</label>
-                            <input type="number" id="finesseBonus" name="finesseBonus" value="0">
-                            <p>Script Needed</p>
-                            <label for="pilotBonus">Pilot</label>
-                            <input type="number" id="pilotBonus" name="pilotBonus" value="0">
-                            <p>Script Needed</p>
-                            <h2>Subskill</h2>
-                            <h2>Bonus</h2>
-                            <h2>Total</h2>
-                            <label for="greatWeaponsBonus">Great Weapons</label>
-                            <input type="number" id="greatWeaponsBonus" name="greatWeaponsBonus" value="0">
-                            <p>Script Needed</p>
-                            <label for="versatileWeaponsBonus">Versatile Weapons</label>
-                            <input type="number" id="versatileWeaponsBonus" name="versatileWeaponsBonus" value="0">
-                            <p>Script Needed</p>
-                            <label for="blockBonus"><em>Block</em></label>
-                            <input type="number" id="blockBonus" name="blockBonus" value="0">
-                            <p>Script Needed</p>
-                            <label for="watchBonus"><em>Watch</em></label>
-                            <input type="number" id="watchBonus" name="watchBonus" value="0">
-                            <p>Script Needed</p>
-                            <label for="endureBonus">Endure</label>
-                            <input type="number" id="endureBonus" name="endureBonus" value="0">
-                            <p>Script Needed</p>
-                            <label for="exertBonus">Exert</label>
-                            <input type="number" id="exertBonus" name="exertBonus" value="0">
-                            <p>Script Needed</p>
-                        </form>
-                    </div>
-            </div>                                        
+            <div id="witsGroup">
+                <div class="coreSkill">
+                    <label for="witsValue">Wits</label>
+                    <input class="input" type="text" id="witsValue" name="witsValue" value="0" onchange="getValues()">
+                </div>
+                <div class="subskill">
+                    <h2>Subskill</h2>
+                    <h2>Bonus</h2>
+                    <h2>Total</h2>
+                    <label for="occultismBonus">Occultism</label>
+                    <input class="input" type="number" id="occultismBonus" name="occultismBonus" value="0" onchange="getValues()">
+                    <p id="totalOccultism"></p>
+                    <label for="reasonBonus"><em>Reason</em></label>
+                    <input class="input" type="number" id="reasonBonus" name="reasonBonus" value="0" onchange="getValues()">
+                    <p id="totalReason"></p>
+                    <label for="learnBonus"><em>Learn</em></label>
+                    <input class="input" type="number" id="learnBonus" name="learnBonus" value="0" onchange="getValues()">
+                    <p id="totalLearn"></p>
+                    <label for="investigateBonus">Investigate</label>
+                    <input class="input" type="number" id="investigateBonus" name="investigateBonus" value="0" onchange="getValues()">
+                    <p id="totalInvestigate"></p>
+                    <label for="practiceBonus">Practice</label>
+                    <input class="input" type="number" id="practiceBonus" name="practiceBonus" value="0" onchange="getValues()">
+                    <p id="totalPractice"></p>
+                </div>
+            </div>
+            <div id="agilityGroup">
+                <div class="coreSkill">
+                    <label for="agilityValue">Agility</label>
+                    <input class="input" type="text" id="agilityValue" name="agilityValue" value="0" onchange="getValues()">
+                </div>
+                <div class="subskill">
+                    <h2>Subskill</h2>
+                    <h2>Bonus</h2>
+                    <h2>Total</h2>
+                    <label for="fineWeaponsBonus">Fine Weapons</label>
+                    <input class="input" type="number" id="fineWeaponsBonus" name="fineWeaponsBonus" value="0" onchange="getValues()">
+                    <p id="totalFineWeapons"></p>
+                    <label for="dualWeaponsBonus">Dual Weapons</label>
+                    <input class="input" type="number" id="dualWeaponsBonus" name="dualWeaponsBonus" value="0" onchange="getValues()">
+                    <p id="totalDualWeapons"></p>
+                    <label for="evadeBonus"><em>Evade</em></label>
+                    <input class="input" type="number" id="evadeBonus" name="evadeBonus" value="0" onchange="getValues()">
+                    <p id="totalEvade"></p>
+                    <label for="ambushBonus"><em>Ambush</em></label>
+                    <input class="input" type="number" id="ambushBonus" name="ambushBonus" value="0" onchange="getValues()">
+                    <p id="totalAmbush"></p>
+                    <label for="finesseBonus">Finesse</label>
+                    <input class="input" type="number" id="finesseBonus" name="finesseBonus" value="0" onchange="getValues()">
+                    <p id="totalFinesse"></p>
+                    <label for="pilotBonus">Pilot</label>
+                    <input class="input" type="number" id="pilotBonus" name="pilotBonus" value="0" onchange="getValues()">
+                    <p id="totalPilot"></p>
+                </div>
+            </div>
+            <div id="vigorGroup">
+                <div class="coreSkill">
+                    <label for="vigorValue">Vigor</label>
+                    <input class="input" type="text" id="vigorValue" name="vigorValue" value="0" onchange="getValues()">
+                </div>
+                <div class="subskill">
+                    <h2>Subskill</h2>
+                    <h2>Bonus</h2>
+                    <h2>Total</h2>
+                    <label for="greatWeaponsBonus">Great Weapons</label>
+                    <input class="input" type="number" id="greatWeaponsBonus" name="greatWeaponsBonus" value="0" onchange="getValues()">
+                    <p id="totalGreatWeapons"></p>
+                    <label for="versatileWeaponsBonus">Versatile Weapons</label>
+                    <input class="input" type="number" id="versatileWeaponsBonus" name="versatileWeaponsBonus" value="0" onchange="getValues()">
+                    <p id="totalVersatileWeapons"></p>
+                    <label for="blockBonus"><em>Block</em></label>
+                    <input class="input" type="number" id="blockBonus" name="blockBonus" value="0" onchange="getValues()">
+                    <p id="totalBlock"></p>
+                    <label for="watchBonus"><em>Watch</em></label>
+                    <input class="input" type="number" id="watchBonus" name="watchBonus" value="0" onchange="getValues()">
+                    <p id="totalWatch"></p>
+                    <label for="endureBonus">Endure</label>
+                    <input class="input" type="number" id="endureBonus" name="endureBonus" value="0" onchange="getValues()">
+                    <p id="totalEndure"></p>
+                    <label for="exertBonus">Exert</label>
+                    <input class="input" type="number" id="exertBonus" name="exertBonus" value="0" onchange="getValues()">
+                    <p id="totalExert"></p>
+                </div>
+            </div>
         </section>
     </main>
 </body>
